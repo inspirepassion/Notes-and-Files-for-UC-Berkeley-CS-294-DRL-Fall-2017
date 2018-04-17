@@ -5,6 +5,7 @@ Assuming we already setup Python 3.5 environment using Anaconda (I use Linux Ubu
 `conda create --prefix dir/name_env python=3.5 numpy scipy matplotlib theano keras ipython jupyter`
 
 1 To properly install Mujoco
+
   1.1 Download executible, activate using license and setup path
   
   1.2 Install package mujoco-py in name_env site-packages
