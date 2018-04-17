@@ -32,6 +32,7 @@ Assuming we already setup Python 3.5 environment using Anaconda (I use Linux Ubu
    The default path is set to be `~/.mujoco/mjkey.txt` and `~/.mujoco/mjpro131`, which is not the same as the location of our mjpro131 folder. What I did is to change the locations where my mjpro131 folder and mjkey.txt are; comment out the default directories.
    
    default__key_path = os.path.expanduser('/home/username/Documents/DRL/mjpro131/bin/mjkey.txt') `previously('~/.mujoco/mjkey.txt')`
+   
    default_mjpro_path = os.path.expanduser('/home/username/Documents/DRL/mjpro131')`previously('~/.mujoco/mjpro131')`
       
   
