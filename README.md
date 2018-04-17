@@ -26,13 +26,13 @@ Assuming we already setup Python 3.5 environment using Anaconda (I use Linux Ubu
   1.1.6 Issue:  
     File "/home/.../lib/python3.5/site-packages/mujoco_py/config.py", line 33, in init_config
 
-    raise error.MujocoDependencyError('To use MuJoCo, you need to either populate ~/.mujoco/mjkey.txt and ~/.mujoco/mjpro131, or set the MUJOCO_PY_MJKEY_PATH and MUJOCO_PY_MJPRO_PATH environment variables appropriately. Follow the instructions on https://github.com/openai/mujoco-py for where to obtain these.')
+   raise error.MujocoDependencyError('To use MuJoCo, you need to either populate ~/.mujoco/mjkey.txt and ~/.mujoco/mjpro131, or set the MUJOCO_PY_MJKEY_PATH and MUJOCO_PY_MJPRO_PATH environment variables appropriately. Follow the instructions on https://github.com/openai/mujoco-py for where to obtain these.')
 mujoco_py.error.MujocoDependencyError: To use MuJoCo, you need to either populate ~/.mujoco/mjkey.txt and ~/.mujoco/mjpro131, or set the MUJOCO_PY_MJKEY_PATH and MUJOCO_PY_MJPRO_PATH environment variables appropriately.
   
-    Solution: open the config.py file:
-    The default path is set to be '~/.mujoco/mjkey.txt' and `~/.mujoco/mjpro131`, which is not the same as the location of our mjpro131 folder. What I did is to change the locations where my mjpro131 folder and mjkey.txt are; comment out the default directories.
-    default__key_path = os.path.expanduser('/home/username/Documents/DRL/mjpro131/bin/mjkey.txt')#('~/.mujoco/mjkey.txt')
-    default_mjpro_path = os.path.expanduser('/home/username/Documents/DRL/mjpro131')#('~/.mujoco/mjpro131')
+   Solution: open the config.py file:
+   The default path is set to be '~/.mujoco/mjkey.txt' and `~/.mujoco/mjpro131`, which is not the same as the location of our mjpro131 folder. What I did is to change the locations where my mjpro131 folder and mjkey.txt are; comment out the default directories.
+   default__key_path = os.path.expanduser('/home/username/Documents/DRL/mjpro131/bin/mjkey.txt')#('~/.mujoco/mjkey.txt')
+   default_mjpro_path = os.path.expanduser('/home/username/Documents/DRL/mjpro131')#('~/.mujoco/mjpro131')
       
   
   1.2.1 Activate the environment we create earlier. `conda info --envs` then `source activate dir/name_env`
